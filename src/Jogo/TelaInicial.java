@@ -53,6 +53,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         BtnX = new javax.swing.JButton();
         BtnO = new javax.swing.JButton();
+        botaoFINALIZAR = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -257,6 +258,15 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        botaoFINALIZAR.setBackground(new java.awt.Color(204, 255, 204));
+        botaoFINALIZAR.setText("FINALIZAR JOGO");
+        botaoFINALIZAR.setEnabled(false);
+        botaoFINALIZAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoFINALIZARActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -283,7 +293,9 @@ public class TelaInicial extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addComponent(botaoINICIAR)))
+                        .addComponent(botaoINICIAR)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botaoFINALIZAR)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -309,7 +321,9 @@ public class TelaInicial extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botaoINICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoINICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoFINALIZAR, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -337,15 +351,6 @@ public class TelaInicial extends javax.swing.JFrame {
         if(BtnX.getBackground()==Color.green || BtnO.getBackground()==Color.green){
             //if(txtJogador1.getText().isEmpty()==false && txtJogador2.getText().isEmpty()==false && (!txtJogador1.getText().equals(txtJogador2.getText())==false))
                 
-                partida_iniciada=true;
-                v.turno=0;
-                v.passarTurno();
-                txtJogador1.setEnabled(false);
-                txtJogador2.setEnabled(false);
-                BtnX.setEnabled(false);
-                BtnO.setEnabled(false);
-                v.habilitarJogo();
-                
             if(BtnX.getBackground()==Color.green){
                 j1.setNome(txtJogador1.getText());
                 j1.setSimbolo("X");
@@ -357,6 +362,11 @@ public class TelaInicial extends javax.swing.JFrame {
                 j2.setNome(txtJogador2.getText());
                 j2.setSimbolo("X");
             }
+                            
+                partida_iniciada=true;
+                v.turno=0;
+                v.passarTurno();
+                v.habilitarJogo();
         }else{
             JOptionPane.showMessageDialog(null, "Jogador 1, selecione um símbolo!");
         } 
@@ -471,6 +481,10 @@ public class TelaInicial extends javax.swing.JFrame {
         v.verificarResultado();
     }//GEN-LAST:event_B33ActionPerformed
 
+    private void botaoFINALIZARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFINALIZARActionPerformed
+        v.desabilitarJogo();
+    }//GEN-LAST:event_botaoFINALIZARActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -516,9 +530,10 @@ public class TelaInicial extends javax.swing.JFrame {
     public static javax.swing.JButton B31;
     public static javax.swing.JButton B32;
     public static javax.swing.JButton B33;
-    private javax.swing.JButton BtnO;
-    private javax.swing.JButton BtnX;
-    private javax.swing.JButton botaoINICIAR;
+    public static javax.swing.JButton BtnO;
+    public static javax.swing.JButton BtnX;
+    public static javax.swing.JButton botaoFINALIZAR;
+    public static javax.swing.JButton botaoINICIAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
@@ -527,7 +542,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField txtJogador1;
-    private javax.swing.JTextField txtJogador2;
+    public static javax.swing.JTextField txtJogador1;
+    public static javax.swing.JTextField txtJogador2;
     // End of variables declaration//GEN-END:variables
 }
