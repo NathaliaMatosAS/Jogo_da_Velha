@@ -10,11 +10,6 @@ public class Jogador {
         simbolo = " ";
         nome = " ";
     }
-    
-    public void modificarAtributos(String nome, String simb ){
-        this.setNome(nome);
-        this.setSimbolo(simb);        
-}
 
     /**
      * @return the simbolo

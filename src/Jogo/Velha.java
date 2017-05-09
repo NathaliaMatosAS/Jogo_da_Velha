@@ -14,12 +14,6 @@ public class Velha {
   int turno;    
   String simboloX="X";
   String simboloO="O";
-  
-   public void iniciarPartida(String nome1, String nome2, String simb1, String simb2){
-        j1.modificarAtributos(nome1, simb1);
-        j2.modificarAtributos(nome2, simb2);
-        turno = 0;
-    }
     
     public void passarTurno(){
         turno += 1;
@@ -78,26 +72,30 @@ public class Velha {
         
         if(turno==10){
             JOptionPane.showMessageDialog(null, "Deu Velha!");
+            desabilitarJogo();
         }
         
     }
     
     public void anunciarVencedorX(){
-        if(j1.getSimbolo()=="X"){
-                JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
+        if("X".equals(j1.getSimbolo())){
+            JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
+        } else {
         }
-        if(j2.getSimbolo()=="X"){
+        if("X".equals(j2.getSimbolo())){
                 JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
         }
+        desabilitarJogo();
     }
     
     public void anunciarVencedorO(){
-    if(j1.getSimbolo()=="O"){
-            JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
-    }
-    if(j2.getSimbolo()=="O"){
-            JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
-    }
+        if("O".equals(j1.getSimbolo())){
+                JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
+        }
+        if("O".equals(j2.getSimbolo())){
+                JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
+        }
+        desabilitarJogo();
 }
     public void habilitarJogo(){
         TelaInicial.B11.setEnabled(true);
@@ -109,6 +107,32 @@ public class Velha {
         TelaInicial.B31.setEnabled(true);
         TelaInicial.B32.setEnabled(true);
         TelaInicial.B33.setEnabled(true);
+        TelaInicial.txtJogador1.setEnabled(false);
+        TelaInicial.txtJogador2.setEnabled(false);
+        TelaInicial.BtnX.setEnabled(false);
+        TelaInicial.BtnO.setEnabled(false);
+        TelaInicial.botaoINICIAR.setEnabled(false);
+        TelaInicial.botaoFINALIZAR.setEnabled(true);
+    }
+    
+    public void desabilitarJogo(){
+        TelaInicial.B11.setEnabled(false);TelaInicial.B11.setText(" ");
+        TelaInicial.B12.setEnabled(false);TelaInicial.B12.setText(" ");
+        TelaInicial.B13.setEnabled(false);TelaInicial.B13.setText(" ");
+        TelaInicial.B21.setEnabled(false);TelaInicial.B21.setText(" ");
+        TelaInicial.B22.setEnabled(false);TelaInicial.B22.setText(" ");
+        TelaInicial.B23.setEnabled(false);TelaInicial.B23.setText(" ");
+        TelaInicial.B31.setEnabled(false);TelaInicial.B31.setText(" ");
+        TelaInicial.B32.setEnabled(false);TelaInicial.B32.setText(" ");
+        TelaInicial.B33.setEnabled(false);TelaInicial.B33.setText(" ");
+        TelaInicial.botaoINICIAR.setEnabled(true);
+        TelaInicial.botaoFINALIZAR.setEnabled(false);
+        TelaInicial.txtJogador1.setEnabled(true);
+        TelaInicial.txtJogador2.setEnabled(true);
+        TelaInicial.BtnX.setEnabled(true);
+        TelaInicial.BtnO.setEnabled(true);
+        
+        
     }
     
     
