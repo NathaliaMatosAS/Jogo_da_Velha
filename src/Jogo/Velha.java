@@ -78,9 +78,9 @@ public class Velha {
     
     public void anunciarVencedor(){
         if(turno%2==1){
-            JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
+            JOptionPane.showMessageDialog(null, j1.getNome()+" venceu!");
         }else{
-            JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
+            JOptionPane.showMessageDialog(null, j2.getNome()+" venceu!");
         }
         deuVelha=false;
         desabilitarJogo();
