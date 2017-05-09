@@ -345,25 +345,20 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void botaoINICIARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoINICIARActionPerformed
 
-        Jogador j1 = new Jogador();
-        Jogador j2 = new Jogador();
         
         if(BtnX.getBackground()==Color.green || BtnO.getBackground()==Color.green){
-            //if(txtJogador1.getText().isEmpty()==false && txtJogador2.getText().isEmpty()==false && (!txtJogador1.getText().equals(txtJogador2.getText())==false))
-                
             if(BtnX.getBackground()==Color.green){
-                j1.setNome(txtJogador1.getText());
-                j1.setSimbolo("X");
-                j2.setNome(txtJogador2.getText());
-                j2.setSimbolo("O");
+                v.j1.setNome(txtJogador1.getText());
+                v.j1.setSimbolo("X");
+                v.j2.setNome(txtJogador2.getText());
+                v.j2.setSimbolo("O");
             }else{
-                j1.setNome(txtJogador1.getText());
-                j1.setSimbolo("O");
-                j2.setNome(txtJogador2.getText());
-                j2.setSimbolo("X");
+                v.j1.setNome(txtJogador1.getText());
+                v.j1.setSimbolo("O");
+                v.j2.setNome(txtJogador2.getText());
+                v.j2.setSimbolo("X");
             }
                             
-                partida_iniciada=true;
                 v.turno=0;
                 v.passarTurno();
                 v.habilitarJogo();
@@ -384,9 +379,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B11ActionPerformed
         if(v.turno%2==1){
-            B11.setText("X");
+            B11.setText(v.j1.getSimbolo());
         }else{
-            B11.setText("O");               
+            B11.setText(v.j2.getSimbolo());               
         }
         B11.setEnabled(false);
         v.passarTurno();
@@ -395,9 +390,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B12ActionPerformed
         if(v.turno%2==1){
-            B12.setText("X");
+            B12.setText(v.j1.getSimbolo());
         }else{
-            B12.setText("O");               
+            B12.setText(v.j2.getSimbolo());               
         }
         B12.setEnabled(false);
         v.passarTurno();
@@ -406,9 +401,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B13ActionPerformed
         if(v.turno%2==1){
-            B13.setText("X");
+            B13.setText(v.j1.getSimbolo());
         }else{
-            B13.setText("O");               
+            B13.setText(v.j2.getSimbolo());               
         }
         B13.setEnabled(false);
         v.passarTurno();
@@ -417,9 +412,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B21ActionPerformed
         if(v.turno%2==1){
-            B21.setText("X");
+            B21.setText(v.j1.getSimbolo());
         }else{
-            B21.setText("O");               
+            B21.setText(v.j2.getSimbolo());               
         }
         B21.setEnabled(false);
         v.passarTurno();
@@ -428,9 +423,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B22ActionPerformed
         if(v.turno%2==1){
-            B22.setText("X");
+            B22.setText(v.j1.getSimbolo());
         }else{
-            B22.setText("O");               
+            B22.setText(v.j2.getSimbolo());               
         }
         B22.setEnabled(false);
         v.passarTurno();
@@ -439,9 +434,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B23ActionPerformed
         if(v.turno%2==1){
-            B23.setText("X");
+            B23.setText(v.j1.getSimbolo());
         }else{
-            B23.setText("O");               
+            B23.setText(v.j2.getSimbolo());               
         }
         B23.setEnabled(false);
         v.passarTurno();
@@ -450,9 +445,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B31ActionPerformed
         if(v.turno%2==1){
-            B31.setText("X");
+            B31.setText(v.j1.getSimbolo());
         }else{
-            B31.setText("O");               
+            B31.setText(v.j2.getSimbolo());               
         }
         B31.setEnabled(false);
         v.passarTurno();
@@ -461,9 +456,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B32ActionPerformed
         if(v.turno%2==1){
-            B32.setText("X");
+            B32.setText(v.j1.getSimbolo());
         }else{
-            B32.setText("O");               
+            B32.setText(v.j2.getSimbolo());               
         }
         B32.setEnabled(false);
         v.passarTurno();
@@ -472,9 +467,9 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void B33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B33ActionPerformed
         if(v.turno%2==1){
-            B33.setText("X");
+            B33.setText(v.j1.getSimbolo());
         }else{
-            B33.setText("O");               
+            B33.setText(v.j2.getSimbolo());               
         }
         B33.setEnabled(false);
         v.passarTurno();

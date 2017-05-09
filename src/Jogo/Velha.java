@@ -12,6 +12,7 @@ public class Velha {
   Jogador j1 = new Jogador();  
   Jogador j2 = new Jogador();
   int turno;    
+  boolean deuVelha=true;
     
     public void passarTurno(){
         turno += 1;
@@ -68,7 +69,7 @@ public class Velha {
             anunciarVencedor();
         }
         
-        if(turno==10){
+        if(turno==10 && deuVelha==true){
             JOptionPane.showMessageDialog(null, "Deu Velha!");
             desabilitarJogo();
         }
@@ -81,6 +82,7 @@ public class Velha {
         }else{
             JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
         }
+        deuVelha=false;
         desabilitarJogo();
 }
     public void habilitarJogo(){
