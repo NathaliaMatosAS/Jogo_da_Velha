@@ -336,6 +336,7 @@ public class TelaInicial extends javax.swing.JFrame {
         
         if(BtnX.getBackground()==Color.green || BtnO.getBackground()==Color.green){
             //if(txtJogador1.getText().isEmpty()==false && txtJogador2.getText().isEmpty()==false && (!txtJogador1.getText().equals(txtJogador2.getText())==false))
+                
                 partida_iniciada=true;
                 v.turno=0;
                 v.passarTurno();
@@ -346,11 +347,15 @@ public class TelaInicial extends javax.swing.JFrame {
                 v.habilitarJogo();
                 
             if(BtnX.getBackground()==Color.green){
-                j1.modificarAtributos(txtJogador1.getText(),"X");
-                j2.modificarAtributos(txtJogador2.getText(),"O");
+                j1.setNome(txtJogador1.getText());
+                j1.setSimbolo("X");
+                j2.setNome(txtJogador2.getText());
+                j2.setSimbolo("O");
             }else{
-                j1.modificarAtributos(txtJogador1.getText(),"O");
-                j2.modificarAtributos(txtJogador2.getText(),"X");
+                j1.setNome(txtJogador1.getText());
+                j1.setSimbolo("O");
+                j2.setNome(txtJogador2.getText());
+                j2.setSimbolo("X");
             }
         }else{
             JOptionPane.showMessageDialog(null, "Jogador 1, selecione um símbolo!");
@@ -373,6 +378,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B11.setText("O");               
         }
+        B11.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B11ActionPerformed
@@ -383,6 +389,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B12.setText("O");               
         }
+        B12.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B12ActionPerformed
@@ -393,6 +400,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B13.setText("O");               
         }
+        B13.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B13ActionPerformed
@@ -403,6 +411,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B21.setText("O");               
         }
+        B21.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B21ActionPerformed
@@ -413,6 +422,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B22.setText("O");               
         }
+        B22.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B22ActionPerformed
@@ -423,6 +433,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B23.setText("O");               
         }
+        B23.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B23ActionPerformed
@@ -433,6 +444,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B31.setText("O");               
         }
+        B31.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B31ActionPerformed
@@ -443,6 +455,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B32.setText("O");               
         }
+        B32.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B32ActionPerformed
@@ -453,6 +466,7 @@ public class TelaInicial extends javax.swing.JFrame {
         }else{
             B33.setText("O");               
         }
+        B33.setEnabled(false);
         v.passarTurno();
         v.verificarResultado();
     }//GEN-LAST:event_B33ActionPerformed

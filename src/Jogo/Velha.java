@@ -51,8 +51,6 @@ public class Velha {
             anunciarVencedorX();
         }
         
-        
-        
         if(TelaInicial.B11.getText().equals("O") && TelaInicial.B12.getText().equals("O") && TelaInicial.B13.getText().equals("O")){
             anunciarVencedorO();
         }
@@ -76,6 +74,10 @@ public class Velha {
         }
         if(TelaInicial.B31.getText().equals("O") && TelaInicial.B32.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
             anunciarVencedorO();
+        }
+        
+        if(turno==10){
+            JOptionPane.showMessageDialog(null, "Deu Velha!");
         }
         
     }
