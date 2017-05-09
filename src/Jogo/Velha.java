@@ -52,6 +52,32 @@ public class Velha {
         }
         
         
+        
+        if(TelaInicial.B11.getText().equals("O") && TelaInicial.B12.getText().equals("O") && TelaInicial.B13.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B11.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B11.getText().equals("O") && TelaInicial.B21.getText().equals("O") && TelaInicial.B31.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B12.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B32.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B13.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B31.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B13.getText().equals("O") && TelaInicial.B23.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B21.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B23.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        if(TelaInicial.B31.getText().equals("O") && TelaInicial.B32.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
+            anunciarVencedorO();
+        }
+        
     }
     
     public void anunciarVencedorX(){
