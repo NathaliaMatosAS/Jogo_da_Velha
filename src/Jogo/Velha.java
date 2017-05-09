@@ -12,8 +12,6 @@ public class Velha {
   Jogador j1 = new Jogador();  
   Jogador j2 = new Jogador();
   int turno;    
-  String simboloX="X";
-  String simboloO="O";
     
     public void passarTurno(){
         turno += 1;
@@ -21,53 +19,53 @@ public class Velha {
     
     public void verificarResultado(){
         if(TelaInicial.B11.getText().equals("X") && TelaInicial.B12.getText().equals("X") && TelaInicial.B13.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B11.getText().equals("X") && TelaInicial.B22.getText().equals("X") && TelaInicial.B33.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B11.getText().equals("X") && TelaInicial.B21.getText().equals("X") && TelaInicial.B31.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B12.getText().equals("X") && TelaInicial.B22.getText().equals("X") && TelaInicial.B32.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B13.getText().equals("X") && TelaInicial.B22.getText().equals("X") && TelaInicial.B31.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B13.getText().equals("X") && TelaInicial.B23.getText().equals("X") && TelaInicial.B33.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B21.getText().equals("X") && TelaInicial.B22.getText().equals("X") && TelaInicial.B23.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         if(TelaInicial.B31.getText().equals("X") && TelaInicial.B32.getText().equals("X") && TelaInicial.B33.getText().equals("X")){
-            anunciarVencedorX();
+            anunciarVencedor();
         }
         
         if(TelaInicial.B11.getText().equals("O") && TelaInicial.B12.getText().equals("O") && TelaInicial.B13.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B11.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B11.getText().equals("O") && TelaInicial.B21.getText().equals("O") && TelaInicial.B31.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B12.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B32.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B13.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B31.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B13.getText().equals("O") && TelaInicial.B23.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B21.getText().equals("O") && TelaInicial.B22.getText().equals("O") && TelaInicial.B23.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         if(TelaInicial.B31.getText().equals("O") && TelaInicial.B32.getText().equals("O") && TelaInicial.B33.getText().equals("O")){
-            anunciarVencedorO();
+            anunciarVencedor();
         }
         
         if(turno==10){
@@ -77,23 +75,11 @@ public class Velha {
         
     }
     
-    public void anunciarVencedorX(){
-        if("X".equals(j1.getSimbolo())){
+    public void anunciarVencedor(){
+        if(turno%2==1){
             JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
-        } else {
-        }
-        if("X".equals(j2.getSimbolo())){
-                JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
-        }
-        desabilitarJogo();
-    }
-    
-    public void anunciarVencedorO(){
-        if("O".equals(j1.getSimbolo())){
-                JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
-        }
-        if("O".equals(j2.getSimbolo())){
-                JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
+        }else{
+            JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
         }
         desabilitarJogo();
 }
